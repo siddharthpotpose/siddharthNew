@@ -18,14 +18,14 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="" class="form-label">Mobile Number</label>
-                    <input type="number" formControlName="phno" class="form-control" name="phno" id="">
+                    <label for="" class="form-label ">Mobile Number</label>
+                    <input type="number" formControlName="phno" class="form-control phno" name="phno" id="">
                     <small class="text-danger" *ngIf=""></small>
                   </div>
 
                   <div class="form-group">
                     <label for="" class="form-label">Gender</label>
-                    <input type="text" formControlName="phno" class="form-control" name="phno" id="">
+                    <input type="text" formControlName="gender" class="form-control" name="gender" id="">
                     <small class="text-danger" *ngIf=""></small>
                   </div>
 
@@ -59,7 +59,8 @@
 
                   <div class="form-group">
                     <label for="" class="form-label">Email Id</label>
-                    <input type="email" #email (blur)="getEmailData(email.value)" formControlName="email" class="form-control" name="email" id="">
+                    <input type="email" #email (blur)="getEmailData(email.value)" formControlName="email"
+                      class="form-control" name="email" id="">
                     <small class="text-danger" *ngIf=""></small>
                   </div>
 
@@ -75,12 +76,12 @@
                       (change)="getCityData($any($event.target).value)" id="">
                       <option [value]="st.key" *ngFor="let st of state|keyvalue">{{st.value}}</option>
                     </select>
-                  </div> 
+                  </div>
 
 
 
                 </div>
- 
+
 
               </div>
               <div class="d-flex justify-content-center">

@@ -1,3 +1,17 @@
 h5{
     font-size: 20px;
 }
+.card{
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    backdrop-filter: blur(20px);
+}
+
+input{
+    background: transparent;
+}
+select{
+    background: transparent;
+    color: white;
+}
