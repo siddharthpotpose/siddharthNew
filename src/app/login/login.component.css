@@ -4,7 +4,23 @@
     left: 50%; */
     /* background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg');
     background-repeat: no-repeat;
-    background-position: center; */
-
-
+    background-position: center;
+    border-radius: 10px; */
 /* } */
+.card{
+    background: transparent;
+    backdrop-filter: blur(20px);
+    color: white;
+}
+
+input{
+    background: transparent; 
+}
+button{
+    width: 50%;
+    height: 45px;
+    background: transparent;
+    margin-left: 25%;
+   
+
+}
