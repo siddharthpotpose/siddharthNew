@@ -1,0 +1,31 @@
+<div class="conatiner-fluid">
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <form [formGroup]="forgetForm">
+                    <div class="card">
+                        <h2 class="card-header">Forget</h2>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="" class="form-label">Email Id</label>
+                                <input type="email" #email class="form-control" formControlName="emailId" name="emailId">
+                                <small class="text-danger"
+                                    *ngIf="!forgetForm.get('emailId')?.valid && forgetForm.get('emailId')?.touched">Enter
+                                    Valid Email Id*</small>
+                            </div> 
+                           
+                            <button type="submit" class="btn btn-primary mt-3" (click)="forgetMail()">Login</button>
+                            <div class="d-flex justify-content-between mt-3">
+                                <a [routerLink]="['/login']">Back</a>
+                                <a [routerLink]="['/register']">Register</a>
+                              
+                            </div>
+
+                                
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
