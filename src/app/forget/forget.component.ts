@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UmaService } from '../service/uma.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { UmaService } from '../service/uma.service';
 export class ForgetComponent {
 constructor(private obj:UmaService){}
 forgetForm=new FormGroup({
-  emailId:new FormControl(''),
+  emailId:new FormControl('',[Validators.required,Validators.email]),
 
 })
 email:any;

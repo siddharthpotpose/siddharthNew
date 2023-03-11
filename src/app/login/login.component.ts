@@ -9,7 +9,7 @@ import { UmaService } from '../service/uma.service';
 })
 export class LoginComponent {
 constructor(private obj:UmaService){}
-
+ 
 loginForm=new FormGroup({
   email:new FormControl('',[Validators.required,Validators.email]),
   pwd:new FormControl('',[Validators.required,Validators.minLength(3)])

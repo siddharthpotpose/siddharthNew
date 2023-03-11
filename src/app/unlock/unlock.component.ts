@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UmaService } from '../service/uma.service';
 
 @Component({
@@ -12,13 +12,13 @@ export class UnlockComponent {
   constructor(private unlockObj:UmaService){}
  
   unlockForm=new FormGroup({
-    confirmPwd:new FormControl(''),
-    email:new FormControl(''),
-    newPwd: new FormControl(''),
-    tempPwd: new FormControl('')
+    confirmPwd:new FormControl('',[Validators.required,Validators.minLength(3)]),
+    email:new FormControl(' ',[Validators.required,Validators.email]), 
+    newPwd: new FormControl(' ',[Validators.required,Validators.minLength(3)]),
+    tempPwd: new FormControl(' ',[Validators.required,Validators.minLength(3)])
 
   })
-  unlock(){
+  unlock(){ 
     this.unlockObj.postUnlock(this.unlockForm.value).subscribe(res=>console.log(res))
   }
   

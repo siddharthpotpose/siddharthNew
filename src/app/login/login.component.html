@@ -3,7 +3,7 @@
         <div class="row justify-content-center mt-5">
             <div class="col-md-6">
                 <form [formGroup]="loginForm">
-                    <div class="card">
+                    <div class="card"> 
                         <h2 class="card-header">Login</h2>
                         <div class="card-body">
                             <div class="form-group">
@@ -18,7 +18,8 @@
                                 <input type="password" class="form-control" formControlName="pwd" name="pwd" placeholder="Enter Your Password">
                                 <small class="text-danger"
                                     *ngIf="!loginForm.get('pwd')?.valid && loginForm.get('pwd')?.touched">Enter Correct Password*</small>
-                            </div>
+                           
+                                </div>
                             <button type="submit" class="btn btn-primary mt-3" (click)="login()">Login</button>
                             <div class="d-flex justify-content-between mt-3">
                                 <a [routerLink]="['/register']" class="text-info">Register</a>

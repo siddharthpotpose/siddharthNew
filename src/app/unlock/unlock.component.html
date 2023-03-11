@@ -8,20 +8,31 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="" class="form-label">Email Id</label>
-                                <input type="email" class="form-control" formControlName="email" name="email" id="">
-                            </div>
+                                <input type="email" class="form-control" formControlName="email" name="email" placeholder="Enter Email Id" id="">
+                                <small class="text-danger"
+                                    *ngIf="!unlockForm.get('email')?.valid && unlockForm.get('email')?. touched">Enter
+                                    Valid Email Id*</small>
+                            </div> 
                             <div class="form-group">
                                 <label for="" class="form-label">Temporary Password </label>
                                 <input type="text" class="form-control " formControlName="tempPwd" name="tempPwd" id="">
+                                <small class="text-danger"
+                                *ngIf="!unlockForm.get('newPwd')?.valid && unlockForm.get('newPwd')?.touched">Enter Correct Temporary Password*</small>
+                       
                             </div>
                             <div class="form-group">
                                 <label for="" class="form-label">New Password </label>
-                                <input type="password" class="form-control" formControlName="newPwd" name="newPwd" id="">
+                                <input type="password" class="form-control" placeholder="Enter Your New Password" formControlName="newPwd" name="newPwd" id="">
+                                <small class="text-danger"
+                                *ngIf="!unlockForm.get('newPwd')?.valid && unlockForm.get('newPwd')?.touched">Enter Correct Password*</small>
+                       
                             </div>
                             <div class="form-group">
                                 <label for="" class="form-label">Confirm Password </label>
                                 <input type="password" class="form-control" formControlName="confirmPwd" name="confirmPwd"
-                                    id="">
+                                placeholder="Enter Your Confirm Password" id="">
+                                    <small class="text-danger"
+                                     *ngIf="!unlockForm.get('confirmPwd')?.valid && unlockForm.get('confirmPwd')?.touched"  >Enter Password</small>
                             </div>
         
                             <button type="submit" class="btn btn-danger m-3" (click)="unlock()" >Unlock Account</button>
