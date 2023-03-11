@@ -7,6 +7,14 @@ h5{
     border: 1px solid white;
     backdrop-filter: blur(20px);
 }
+.phno{
+    color: black;
+    /* background-color: white; */
+}
+
+h5{
+    border-bottom: 1px solid white;
+}
 
 input{
     background: transparent;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UmaService } from '../service/uma.service';
 
 @Component({
@@ -12,15 +12,20 @@ export class RegisterComponent {
   constructor(private obj:UmaService){this.getCountryData()}
 
   OnInit():void{this.saveData()}
-  RegistrationForm=new FormGroup({
+
+  RegistrationForm = new FormGroup({
     cityId:new FormControl(''),
     countryId: new FormControl(''),
     dob:new FormControl(''), 
-    email: new FormControl(''),
-    fname: new FormControl(''),
+    email: new FormControl('',[Validators.required,Validators.email]),
+    fname: new FormControl('',[Validators.required]),
     gender: new FormControl(''),
-    lname: new FormControl(''),
-    phno:new FormControl(''), 
+    lname: new FormControl('',[Validators.required]),
+    phno:new FormControl(' ',
+    [Validators.required,Validators.pattern('[0-9]*'),
+    Validators.minLength(10),
+    Validators.maxLength(10)
+  ]), 
     stateId:new FormControl('')
   })
  

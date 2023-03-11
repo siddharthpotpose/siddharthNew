@@ -6,10 +6,11 @@ body {
       font-family:
        Roboto, "Helvetica Neue", 
        sans-serif; 
-       
        background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg');
        background-repeat: no-repeat;
       background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
       /* background-color: black; */
       
 }
