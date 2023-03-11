@@ -11,7 +11,7 @@ export class ForgetComponent {
 constructor(private obj:UmaService){}
 forgetForm=new FormGroup({
   emailId:new FormControl('',[Validators.required,Validators.email]),
-
+  
 })
 email:any;
 forgetMail(){

@@ -11,7 +11,7 @@
                                 <input type="email" #email class="form-control" placeholder="Enter Email Id" formControlName="emailId" name="emailId">
                                 <small class="text-danger"
                                     *ngIf="!forgetForm.get('emailId')?.valid && forgetForm.get('emailId')?.touched">Enter
-                                    Valid Email Id*</small>
+                                    Valid Email Id*</small> 
                             </div> 
                            
                             <button type="submit" class="btn btn-primary mt-3" (click)="forgetMail()">Login</button>
