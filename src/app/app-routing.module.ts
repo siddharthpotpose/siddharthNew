@@ -7,7 +7,14 @@ import { RegisterComponent } from './register/register.component';
 import { UnlockComponent } from './unlock/unlock.component';
 
 const routes: Routes = [
-  
+  // {
+  //   path:' ', redirectTo:'home',
+  //   pathMatch:'full'
+  // },
+  {
+    path:'*',
+    component:HomeComponent
+  }, 
   {
     path:'register',
     component:RegisterComponent

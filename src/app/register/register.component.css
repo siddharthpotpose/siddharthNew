@@ -23,3 +23,9 @@ select{
     background: transparent;
     color: white;
 }
+button{
+    background: transparent;
+    color: white;
+    width: 20%;
+    height: 45px;
+}

@@ -14,7 +14,7 @@ export class UnlockComponent {
   unlockForm=new FormGroup({
     confirmPwd:new FormControl('',[Validators.required,Validators.minLength(3)]),
     email:new FormControl(' ',[Validators.required,Validators.email]), 
-    newPwd: new FormControl(' ',[Validators.required,Validators.minLength(3)]),
+    newPwd: new FormControl('',[Validators.required,Validators.minLength(3)]),
     tempPwd: new FormControl(' ',[Validators.required,Validators.minLength(3)])
 
   })
